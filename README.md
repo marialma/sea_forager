@@ -1,7 +1,7 @@
 # sea_forager
 when is a good time to sea forage?
 
-This is a function that takes a look at the http://tide-forecast.com and sunset/sunrise times to help you find a good time to go forage. 
+This is a function that takes a look at the http://tide-forecast.com and sunset/sunrise times to help you find a good time to go forage. Only works for california right now, unless you want to edit in your locations to `locations.R`
 
 Usage: 
 
