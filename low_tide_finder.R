@@ -5,13 +5,25 @@ library(tidyverse)
 library(lubridate)
 
 source("locations.R")
-
+list_locations <- function() {
+  message("Please choose from available locations:")
+  print(paste(locations, sep ="\n"))
+  message("Please use the full name of the location. (ie, 'Monterey-Monterey-Harbor-California')")
+  
+}
 find_tide <- function(location = "Monterey-Monterey-Harbor-California"){ 
   
-  if(location %in% locations) {
-    
-    url = paste0("https://www.tide-forecast.com/locations/", location, "/tides/latest")
-    tides <- read_html(url)
+  url = paste0("https://www.tide-forecast.com/locations/", location, "/tides/latest")
+  tides <- tryCatch(
+    {read_html(url)},
+    error = function(cond) {
+      message("Please use a valid location. 
+      You can use list_locations() for a list of valid locations in California. 
+          For non-Californian locations, please go to the tide-forecast.com website and look for the 
+          specific spelling and formatting of your desired location.")
+    })
+  
+  if(!is.null(tides)){
     tidechart <- tides %>% html_nodes(xpath="/html/body/main/div[3]/div[1]/div[1]/div[3]/div[2]/div/div/table") %>% 
       html_table()
     tc <- as.data.frame(tidechart[[1]])
@@ -73,9 +85,5 @@ find_tide <- function(location = "Monterey-Monterey-Harbor-California"){
       
     }
     return(good_tides)
-  } else {
-    message("Please choose from available locations:")
-    print(paste(locations, sep ="\n"))
-    message("Please use the full name of the location. (ie, 'Monterey-Monterey-Harbor-California')")
-  }
+  } 
 }
