@@ -91,7 +91,7 @@ Usage:
     * `Granite-Rock-Redwood-Creek-San-Francisco-Bay-California ` : Granite Rock, Redwood Creek, San Francisco Bay 
     * `Grant-Line-Canal-drawbridge-Old-River-California ` : Grant Line Canal (drawbridge), Old River 
     * `Grover-Beach ` : Grover Beach 
-<option selected="selected" value="Half-Moon-Bay-California ` : Half Moon Bay 
+    * `Half-Moon-Bay-California ` : Half Moon Bay 
     * `Hayward ` : Hayward 
     * `Hercules-Refugio-Landing-San-Pablo-Bay-California ` : Hercules, Refugio Landing, San Pablo Bay 
     * `Hog-Island-San-Antonio-Creek-San-Pablo-Bay-California ` : Hog Island, San Antonio Creek, San Pablo Bay 
