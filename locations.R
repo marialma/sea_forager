@@ -1,4 +1,4 @@
-location <-  c("Alameda-Creek-San-Francisco-Bay-California",
+locations <-  c("Alameda-Creek-San-Francisco-Bay-California",
                "Alameda-Naval-Air-Station-San-Francisco-Bay-California",              
                "Alameda-San-Francisco-Bay-California",                                
                "Albion-California",                                                   
